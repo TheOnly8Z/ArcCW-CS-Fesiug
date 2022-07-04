@@ -29,9 +29,9 @@ SWEP.RangeMin = 10
 SWEP.Range = 135 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 1050 -- projectile or phys bullet muzzle velocity
--- IN M/S
+
+SWEP.PhysBulletMuzzleVelocity = 800
+
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 24 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 42
@@ -139,11 +139,11 @@ SWEP.AttachmentElements = {
                 }
             }
         },
-    },  
+    },
     ["nors"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
         WMBodygroups = {},
-    },  
+    },
     ["nobrake"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
         WMBodygroups = {},
@@ -156,26 +156,26 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {cspf.."optic", cspf.."optic_sniper"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {cspf .. "optic", cspf .. "optic_sniper"}, -- what kind of attachments can fit here, can be string or table
         Bone = "v_weapon.sg552_Parent", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vang = Angle(-90, 0, -90),
             wang = Angle(-10.52, 0, 180)
         },
-        SlideAmount = { -- how far this attachment can slide in both directions.
+        SlideAmount = {
             -- overrides Offset.
             vmin = Vector(-0.05, -7.4, -2),
             vmax = Vector(-0.05, -7.4, -5.5),
             wmin = Vector(5, 0.899, -6),
             wmax = Vector(7, 0.899, -6),
-        },
+        }, -- how far this attachment can slide in both directions.
         InstalledEles = {"mount"},
         MergeSlots = {9},
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = cspf.."muzzle",
+        Slot = cspf .. "muzzle",
         Bone = "v_weapon.sg552_Parent",
         Offset = {
             vpos = Vector(0, -5.15, -18.275),
@@ -187,7 +187,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {cspf.."foregrip", cspf.."ubgl", cspf.."bipod"},
+        Slot = {cspf .. "foregrip", cspf .. "ubgl", cspf .. "bipod"},
         Bone = "v_weapon.sg552_Parent",
         Offset = {
             vang = Angle(-90, 0, -90),
@@ -202,7 +202,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = cspf.."tac",
+        Slot = cspf .. "tac",
         Bone = "v_weapon.sg552_Parent",
         Offset = {
             vpos = Vector(-0.69, -6.203, -12.273), -- offset that the attachment will be relative to the bone
@@ -213,20 +213,20 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Fire Group",
-        Slot = cspf.."fcg",
+        Slot = cspf .. "fcg",
         DefaultAttName = "Standard FCG"
     },
     {
         PrintName = "Ammo Type",
-        Slot = cspf.."ammo_bullet"
+        Slot = cspf .. "ammo_bullet"
     },
     {
         PrintName = "Perk",
-        Slot = cspf.."perk"
+        Slot = cspf .. "perk"
     },
     {
         PrintName = "Charm",
-        Slot = cspf.."charm",
+        Slot = cspf .. "charm",
         Hidden = true,
         FreeSlot = true,
         Bone = "v_weapon.sg552_Parent", -- relevant bone any attachments will be mostly referring to
@@ -234,25 +234,25 @@ SWEP.Attachments = {
             vpos = Vector(-0.35, -4, -1), -- offset that the attachment will be relative to the bone
             vang = Angle(-90, 0, -90),
             wpos = Vector(6.099, 1.6, -3.301),
-            wang = Angle(171.817, 180-1.17, 0),
+            wang = Angle(171.817, 180 - 1.17, 0),
         },
     },
     {
         PrintName = "Optic",
-        Slot = cspf.."optic_lp",
+        Slot = cspf .. "optic_lp",
         Bone = "v_weapon.sg552_Parent", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vang = Angle(-90, 0, -90),
             wang = Angle(-10.52, 0, 180)
         },
-        SlideAmount = { -- how far this attachment can slide in both directions.
+        SlideAmount = {
             -- overrides Offset.
             vmin = Vector(-0.05, -7.4, -2),
             vmax = Vector(-0.05, -7.4, -5.5),
             wmin = Vector(5, 0.899, -6),
             wmax = Vector(7, 0.899, -6),
-        },
-        InstalledEles = {"mount","nors"},
+        }, -- how far this attachment can slide in both directions.
+        InstalledEles = {"mount", "nors"},
         Hidden = true,
     },
 }

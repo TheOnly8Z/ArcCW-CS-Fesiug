@@ -13,6 +13,8 @@ att.Mult_SightTime = 0.9
 att.Mult_Precision = 0.25
 att.Mult_Recoil = 0.85
 
+att.Mult_PhysBulletMuzzleVelocity = 1.25
+
 att.MagReducer = true
 
 att.ActivateElements = {"reducedmag"}

@@ -27,10 +27,8 @@ SWEP.RangeMin = 10
 SWEP.Range = 250 -- in METRES
 SWEP.Penetration = 22
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 1800 -- projectile or phys bullet muzzle velocity
--- IN M/S
 
+SWEP.PhysBulletMuzzleVelocity = 800
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 
@@ -168,11 +166,11 @@ SWEP.ExtraSightDist = 8
 SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
-        Slot = cspf.."ammo_bullet"
+        Slot = cspf .. "ammo_bullet"
     },
     {
         PrintName = "Perk",
-        Slot = cspf.."perk"
+        Slot = cspf .. "perk"
     },
 }
 

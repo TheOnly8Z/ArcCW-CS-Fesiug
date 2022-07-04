@@ -27,9 +27,9 @@ SWEP.RangeMin = 10
 SWEP.Range = 50 -- in METRES
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 400 -- projectile or phys bullet muzzle velocity
--- IN M/S
+
+SWEP.PhysBulletMuzzleVelocity = 750
+
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 50 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 75
@@ -161,7 +161,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {cspf.."optic_lp", cspf.."optic", cspf.."optic_sniper"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {cspf .. "optic_lp", cspf .. "optic", cspf .. "optic_sniper"}, -- what kind of attachments can fit here, can be string or table
         MergeSlots = {8},
         Bone = "v_weapon.p90_Parent", -- relevant bone any attachments will be mostly referring to
         Offset = {
@@ -176,7 +176,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = cspf.."muzzle",
+        Slot = cspf .. "muzzle",
         Bone = "v_weapon.p90_Parent",
         Offset = {
             vpos = Vector(0.018, -3.997, -8.075),
@@ -187,7 +187,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {cspf.."foregrip", cspf.."style_pistol"},
+        Slot = {cspf .. "foregrip", cspf .. "style_pistol"},
         Bone = "v_weapon.p90_Parent",
         Offset = {
             vpos = Vector(0, -3.3, -5),
@@ -199,7 +199,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = cspf.."tac",
+        Slot = cspf .. "tac",
         Bone = "v_weapon.p90_Parent",
         Offset = {
             vpos = Vector(-0.311, -6.533, -4.743), -- offset that the attachment will be relative to the bone
@@ -210,19 +210,19 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Fire Group",
-        Slot = cspf.."fcg",
+        Slot = cspf .. "fcg",
         DefaultAttName = "Standard FCG"
     },
     {
         PrintName = "Ammo Type",
-        Slot = cspf.."ammo_bullet"
+        Slot = cspf .. "ammo_bullet"
     },
     {
         PrintName = "Perk",
-        Slot = cspf.."perk"
+        Slot = cspf .. "perk"
     },
     {
-        Slot = cspf.."optic_p90_ring", -- what kind of attachments can fit here, can be string or table
+        Slot = cspf .. "optic_p90_ring", -- what kind of attachments can fit here, can be string or table
         Bone = "v_weapon.p90_Parent", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
@@ -236,7 +236,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = cspf.."charm",
+        Slot = cspf .. "charm",
         Hidden = true,
         FreeSlot = true,
         Bone = "v_weapon.p90_Parent",

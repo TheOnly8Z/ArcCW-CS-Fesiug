@@ -28,8 +28,8 @@ SWEP.Range = 50 -- in METRES
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 350 -- projectile or phys bullet muzzle velocity
--- IN M/S
+
+SWEP.PhysBulletMuzzleVelocity = 250
 
 SWEP.CanFireUnderwater = false
 SWEP.ChamberSize = 1 -- how many rounds can be chambered.
@@ -146,7 +146,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = cspf.."optic_lp", -- what kind of attachments can fit here, can be string or table
+        Slot = cspf .. "optic_lp", -- what kind of attachments can fit here, can be string or table
         Bone = "v_weapon.P228_Slide", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0.05, -0.4, -0.5), -- offset that the attachment will be relative to the bone
@@ -159,7 +159,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = cspf.."muzzle",
+        Slot = cspf .. "muzzle",
         Bone = "v_weapon.P228_Parent",
         Offset = {
             vpos = Vector(0.064, -3.942, -5.121),
@@ -170,7 +170,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {cspf.."foregrip_pistol", cspf.."style_pistol"},
+        Slot = {cspf .. "foregrip_pistol", cspf .. "style_pistol"},
         Bone = "v_weapon.P228_Parent",
         Offset = {
             vpos = Vector(0.3, -2.1, -2.5),
@@ -181,7 +181,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = cspf.."tac_pistol",
+        Slot = cspf .. "tac_pistol",
         Bone = "v_weapon.P228_Parent",
         Offset = {
             vpos = Vector(0.041, -2.75, -3.783), -- offset that the attachment will be relative to the bone
@@ -192,20 +192,20 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Fire Group",
-        Slot = cspf.."fcg",
+        Slot = cspf .. "fcg",
         DefaultAttName = "Standard FCG"
     },
     {
         PrintName = "Ammo Type",
-        Slot = cspf.."ammo_bullet"
+        Slot = cspf .. "ammo_bullet"
     },
     {
         PrintName = "Perk",
-        Slot = cspf.."perk"
+        Slot = cspf .. "perk"
     },
     {
         PrintName = "Charm",
-        Slot = cspf.."charm",
+        Slot = cspf .. "charm",
         Hidden = true,
         FreeSlot = true,
         Bone = "v_weapon.P228_Slide", -- relevant bone any attachments will be mostly referring to

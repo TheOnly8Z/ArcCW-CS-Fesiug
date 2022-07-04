@@ -13,3 +13,5 @@ att.Mult_DamageMin = 0.9
 att.Mult_Penetration = 0.75
 att.Mult_Recoil = 0.75
 att.Mult_ShootVol = 0.8
+
+att.Mult_PhysBulletMuzzleVelocity = 0.8

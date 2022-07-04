@@ -30,8 +30,8 @@ SWEP.Range = 40 -- in METRES
 SWEP.Penetration = 10
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 500 -- projectile or phys bullet muzzle velocity
--- IN M/S
+
+SWEP.PhysBulletMuzzleVelocity = 400
 
 SWEP.CanFireUnderwater = false
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
@@ -187,7 +187,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {cspf.."optic_lp", cspf.."optic", cspf.."optic_sniper"},
+        Slot = {cspf .. "optic_lp", cspf .. "optic", cspf .. "optic_sniper"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -2, -2),
@@ -200,7 +200,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = cspf.."muzzle",
+        Slot = cspf .. "muzzle",
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -1.4, -9.5),
@@ -211,7 +211,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {cspf.."foregrip_pistol", cspf.."style_pistol"},
+        Slot = {cspf .. "foregrip_pistol", cspf .. "style_pistol"},
         Bone = "Body",
         Offset = {
             vpos = Vector(0, 0.2, -2),
@@ -222,7 +222,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = cspf.."tac_pistol",
+        Slot = cspf .. "tac_pistol",
         Bone = "Body",
         Offset = {
             vpos = Vector(0, -0.5, -10.5),
@@ -233,15 +233,15 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = cspf.."ammo_bullet",
+        Slot = cspf .. "ammo_bullet",
     },
     {
         PrintName = "Perk",
-        Slot = {cspf.."perk", cspf.."perk_revolver"}
+        Slot = {cspf .. "perk", cspf .. "perk_revolver"}
     },
     {
         PrintName = "Charm",
-        Slot = cspf.."charm",
+        Slot = cspf .. "charm",
         Hidden = true,
         FreeSlot = true,
         Bone = "Body",

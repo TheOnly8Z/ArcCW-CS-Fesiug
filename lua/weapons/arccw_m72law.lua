@@ -112,7 +112,7 @@ SWEP.Disposable = true
 SWEP.Attachments = {
     {
         PrintName = "Charm",
-        Slot = cspf.."charm",
+        Slot = cspf .. "charm",
         Hidden = true,
         FreeSlot = true,
         Bone = "ValveBiped.weapon_bone",

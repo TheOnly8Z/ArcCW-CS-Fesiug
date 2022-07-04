@@ -28,6 +28,8 @@ SWEP.Range = 20 -- in METRES
 SWEP.Penetration = 5
 SWEP.DamageType = DMG_BUCKSHOT
 
+SWEP.PhysBulletMuzzleVelocity = 175
+
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 2 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 2
@@ -169,12 +171,11 @@ SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.ExtraSightDist = 5
-
 SWEP.Attachments = {
     {
         PrintName = "Optic", -- print name
         DefaultAttName = "Iron Sights",
-        Slot = {cspf.."optic_lp", cspf.."optic", cspf.."optic_sniper"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {cspf .. "optic_lp", cspf .. "optic", cspf .. "optic_sniper"}, -- what kind of attachments can fit here, can be string or table
         Bone = "Weapon_Thing", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0, -2.5, -1), -- offset that the attachment will be relative to the bone
@@ -186,11 +187,11 @@ SWEP.Attachments = {
     {
         PrintName = "Choke",
         DefaultAttName = "Standard Choke",
-        Slot = cspf.."choke",
+        Slot = cspf .. "choke",
     },
     {
         PrintName = "Underbarrel",
-        Slot = {cspf.."foregrip", cspf.."style_pistol"},
+        Slot = {cspf .. "foregrip", cspf .. "style_pistol"},
         Bone = "Weapon_Thing",
         Offset = {
             vpos = Vector(0, -1.25, 2),
@@ -201,7 +202,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Slot = cspf.."tac",
+        Slot = cspf .. "tac",
         Bone = "Weapon_Thing",
         Offset = {
             vpos = Vector(-0.8, -2, 5), -- offset that the attachment will be relative to the bone
@@ -212,15 +213,15 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = cspf.."ammo_shotgun"
+        Slot = cspf .. "ammo_shotgun"
     },
     {
         PrintName = "Perk",
-        Slot = cspf.."perk"
+        Slot = cspf .. "perk"
     },
     {
         PrintName = "Charm",
-        Slot = cspf.."charm",
+        Slot = cspf .. "charm",
         Hidden = true,
         FreeSlot = true,
         Bone = "Weapon_Main", -- relevant bone any attachments will be mostly referring to

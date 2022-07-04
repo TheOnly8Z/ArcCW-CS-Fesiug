@@ -27,9 +27,8 @@ SWEP.RangeMin = 10
 SWEP.Range = 100 -- in METRES
 SWEP.Penetration = 22
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 1800 -- projectile or phys bullet muzzle velocity
--- IN M/S
+
+SWEP.PhysBulletMuzzleVelocity = 850
 
 
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.

@@ -27,8 +27,9 @@ SWEP.RangeMin = 10
 SWEP.Range = 35 -- in METRES
 SWEP.Penetration = 5
 SWEP.DamageType = DMG_BUCKSHOT
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 150 -- projectile or phys bullet muzzle velocity
+
+SWEP.PhysBulletMuzzleVelocity = 200
+
 -- IN M/S
 SWEP.ChamberSize = 0 -- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 2 -- DefaultClip is automatically set.
