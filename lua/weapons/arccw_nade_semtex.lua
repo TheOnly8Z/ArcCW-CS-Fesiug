@@ -22,7 +22,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_nade_semtex.mdl"
 SWEP.WorldModel = "models/weapons/arccw/w_nade_semtex.mdl"
 SWEP.ViewModelFOV = 60
 
-SWEP.FuseTime = false
+SWEP.FuseTime = 5.5
 
 SWEP.Throwing = true
 
